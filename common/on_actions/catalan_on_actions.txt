@@ -1,0 +1,9 @@
+on_actions = {
+	CAT ={
+		on_civil_war_end = {
+			clr_global_flag = CAT_civil_war
+			set_global_flag = CAT_civil_war_ended
+		}
+	}
+
+}

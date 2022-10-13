@@ -1,0 +1,102 @@
+spriteTypes = {
+
+	###CAT
+	SpriteType = {
+		name = "GFX_idea_catalan_junta"
+		texturefile = "gfx/interface/ideas/catalan_junta_cat.dds"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_foreing_strikes"
+		texturefile = "gfx/interface/ideas/foreing_strikes_cat.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_gov_power"
+		texturefile = "gfx/interface/ideas/gov_power_cat.dds"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_alfonso_carlos"
+		texturefile = "gfx/interface/ideas/alfonso_carlos.dds"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_javier_i"
+		texturefile = "gfx/interface/ideas/javier_i.dds"		
+	}
+	SpriteType = {
+		name = "GFX_idea_federica_montseny"
+		texturefile = "gfx/interface/ideas/CAT_federica_montseny_mane.dds"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_CAT_enric_perez"
+		texturefile = "gfx/interface/ideas/CAT_enric_perez.dds"		
+	}
+	SpriteType = {
+		name = "GFX_idea_CAT_daniel_cardona"
+		texturefile = "gfx/interface/ideas/CAT_daniel_cardona.dds"		
+	}
+	SpriteType = {
+		name = "GFX_federic_escofet"
+		texturefile = "gfx/interface/ideas/federic_escofet_idea.dds"		
+	}
+	SpriteType = {
+		name = "GFX_ventura_cassol"
+		texturefile = "gfx/interface/ideas/ventura_cassol.dds"		
+	}
+	SpriteType = {
+		name = "GFX_federica_montseny"
+		texturefile = "gfx/interface/ideas/CAT_federica_montseny_mane.dds"		
+	}
+	SpriteType = {
+		name = "GFX_josep_maria_benet_idea"
+		texturefile = "gfx/interface/ideas/josep_maria_benet_idea.dds"		
+	}
+	
+	
+	
+    ###LEADERS
+	SpriteType = {
+		name = "GFX_Portrait_federico_escofet"
+		texturefile = "gfx/leaders/CAT/Portrait_federico_escofet.dds"		
+	}
+	SpriteType = {
+		name = "GFX_Portrait_josep_maria_benet"
+		texturefile = "gfx/leaders/CAT/r56_portrait_CAT_josep_maria_benet.dds"		
+	}
+	SpriteType = {
+		name = "GFX_Portrait_lluis_companys"
+		texturefile = "gfx/leaders/CAT/Portrait_lluis_companys.dds"		
+	}
+	SpriteType = {
+		name = "GFX_alfonso_carlos"
+		texturefile = "gfx/leaders/CAT/alfonso_carlos.dds"		
+	}
+	SpriteType = {
+		name = "GFX_Portrait_enrique_perrez_farras"
+		texturefile = "gfx/leaders/CAT/Portrait_enrique_perrez_farras.dds"		
+	}
+	SpriteType = {
+		name = "GFX_daniel_cardona"
+		texturefile = "gfx/leaders/CAT/daniel_cardona.dds"		
+	}
+	SpriteType = {
+		name = "GFX_Portrait_joan_comorera"
+		texturefile = "gfx/leaders/CAT/Portrait_joan_comorera.dds"		
+	}
+	SpriteType = {
+		name = "GFX_xavier_bourbon"
+		texturefile = "gfx/leaders/CAT/portrait_spa_xavier_of_bourbon_parma.dds"		
+	}
+	SpriteType = {
+		name = "GFX_Portrait_francesc_cambo"
+		texturefile = "gfx/leaders/CAT/Portrait_francesc_cambo.dds"		
+	}
+	SpriteType = {
+		name = "GFX_joan_peiro"
+		texturefile = "gfx/leaders/CAT/r56_portrait_CAT_joan_peiro.dds"		
+	}
+	
+	

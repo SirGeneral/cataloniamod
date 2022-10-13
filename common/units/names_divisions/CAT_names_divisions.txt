@@ -1,0 +1,562 @@
+﻿
+CAT_INF_01 = 
+{
+	name = "Infantry Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Divisió d'Infantería"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió d'Infantería" }
+		2 = { "%a Divisió d'Infantería" }
+		3 = { "%a Divisió d'Infantería" }
+		4 = { "%a Divisió d'Infantería" }
+		5 = { "%a Divisió d'Infantería" }
+		6 = { "%a Divisió d'Infantería" }
+		7 = { "%a Divisió d'Infantería" }
+		8 = { "%a Divisió d'Infantería" }
+		9 = { "%a Divisió d'Infantería" }
+		10 = { "%a Divisió d'Infantería" }
+		11 = { "%a Divisió d'Infantería" }
+		12 = { "%a Divisió d'Infantería" }
+		13 = { "%a Divisió d'Infantería" }
+		14 = { "%a Divisió d'Infantería" }
+		15 = { "%a Divisió d'Infantería" }
+		16 = { "%a Divisió d'Infantería" }
+		17 = { "%a Divisió d'Infantería" }
+		18 = { "%a Divisió d'Infantería" }
+		19 = { "%a Divisió d'Infantería" }
+		20 = { "%a Divisió d'Infantería" }		
+	}
+}
+
+CAT_INFB_01 = 
+{
+	name = "Infantry Brigade"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Brigada d'Infantería"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Brigada d'Infantería" }
+		2 = { "%a Brigada d'Infantería" }
+		3 = { "%a Brigada d'Infantería" }
+		4 = { "%a Brigada d'Infantería" }
+		5 = { "%a Brigada d'Infantería" }
+		6 = { "%a Brigada d'Infantería" }
+		7 = { "%a Brigada d'Infantería" }
+		8 = { "%a Brigada d'Infantería" }
+		9 = { "%a Brigada d'Infantería" }
+		10 = { "%a Brigada d'Infantería" }
+		11 = { "%a Brigada d'Infantería" }
+		12 = { "%a Brigada d'Infantería" }
+		13 = { "%a Brigada d'Infantería" }
+		14 = { "%a Brigada d'Infantería" }
+		15 = { "%a Brigada d'Infantería" }
+		16 = { "%a Brigada d'Infantería" }
+		17 = { "%a Brigada d'Infantería" }
+		18 = { "%a Brigada d'Infantería" }
+		19 = { "%a Brigada d'Infantería" }
+		20 = { "%a Brigada d'Infantería" }		
+	}
+}
+
+CAT_INF_02 = 
+{
+	name = "Infantry Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Divisió de l'Exèrcit"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió de l'Exèrcit" }
+		2 = { "%a Divisió de l'Exèrcit" }
+		3 = { "%a Divisió de l'Exèrcit" }
+		4 = { "%a Divisió de l'Exèrcit" }
+		5 = { "%a Divisió de l'Exèrcit" }
+		6 = { "%a Divisió de l'Exèrcit" }
+		7 = { "%a Divisió de l'Exèrcit" }
+		8 = { "%a Divisió de l'Exèrcit" }
+		9 = { "%a Divisió de l'Exèrcit" }
+		10 = { "%a Divisió de l'Exèrcit" }
+		11 = { "%a Divisió de l'Exèrcit" }
+		12 = { "%a Divisió de l'Exèrcit" }
+		13 = { "%a Divisió de l'Exèrcit" }
+		14 = { "%a Divisió de l'Exèrcit" }
+		15 = { "%a Divisió de l'Exèrcit" }
+		16 = { "%a Divisió de l'Exèrcit" }
+		17 = { "%a Divisió de l'Exèrcit" }
+		18 = { "%a Divisió de l'Exèrcit" }
+		19 = { "%a Divisió de l'Exèrcit" }
+		20 = { "%a Divisió de l'Exèrcit" }		
+	}
+}
+
+CAT_INFB_02 = 
+{
+	name = "Infantry Brigade"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Brigada de l'Exèrcit"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Brigada de l'Exèrcit" }
+		2 = { "%a Brigada de l'Exèrcit" }
+		3 = { "%a Brigada de l'Exèrcit" }
+		4 = { "%a Brigada de l'Exèrcit" }
+		5 = { "%a Brigada de l'Exèrcit" }
+		6 = { "%a Brigada de l'Exèrcit" }
+		7 = { "%a Brigada de l'Exèrcit" }
+		8 = { "%a Brigada de l'Exèrcit" }
+		9 = { "%a Brigada de l'Exèrcit" }
+		10 = { "%a Brigada de l'Exèrcit" }
+		11 = { "%a Brigada de l'Exèrcit" }
+		12 = { "%a Brigada de l'Exèrcit" }
+		13 = { "%a Brigada de l'Exèrcit" }
+		14 = { "%a Brigada de l'Exèrcit" }
+		15 = { "%a Brigada de l'Exèrcit" }
+		16 = { "%a Brigada de l'Exèrcit" }
+		17 = { "%a Brigada de l'Exèrcit" }
+		18 = { "%a Brigada de l'Exèrcit" }
+		19 = { "%a Brigada de l'Exèrcit" }
+		20 = { "%a Brigada de l'Exèrcit" }		
+	}
+}
+
+CAT_CAV_01 = 
+{
+	name = "Cavalry Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Divisió de Caballería"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió de Caballería" }
+		2 = { "%a Divisió de Caballería" }
+		3 = { "%a Divisió de Caballería" }
+		4 = { "%a Divisió de Caballería" }
+		5 = { "%a Divisió de Caballería" }
+		6 = { "%a Divisió de Caballería" }
+		7 = { "%a Divisió de Caballería" }
+		8 = { "%a Divisió de Caballería" }
+		9 = { "%a Divisió de Caballería" }
+		10 = { "%a Divisió de Caballería" }
+	}
+}
+
+CAT_CAVB_01 = 
+{
+	name = "Cavalry Brigade"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Brigada de Caballería"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Brigada de Caballería" }
+		2 = { "%a Brigada de Caballería" }
+		3 = { "%a Brigada de Caballería" }
+		4 = { "%a Brigada de Caballería" }
+		5 = { "%a Brigada de Caballería" }
+		6 = { "%a Brigada de Caballería" }
+		7 = { "%a Brigada de Caballería" }
+		8 = { "%a Brigada de Caballería" }
+		9 = { "%a Brigada de Caballería" }
+		10 = { "%a Brigada de Caballería" }
+	}
+}
+
+CAT_MOT_01 = 
+{
+	name = "Motorized Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Divisió Motorizada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió Motorizada" }
+		2 = { "%a Divisió Motorizada" }
+		3 = { "%a Divisió Motorizada" }
+		4 = { "%a Divisió Motorizada" }
+		5 = { "%a Divisió Motorizada" }
+		6 = { "%a Divisió Motorizada" }
+		7 = { "%a Divisió Motorizada" }
+		8 = { "%a Divisió Motorizada" }
+		9 = { "%a Divisió Motorizada" }
+		10 = { "%a Divisió Motorizada" }
+	}
+}
+
+CAT_MOT_02 = 
+{
+	name = "Motorized Infantry"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { CAT_INF_02 }
+
+	fallback_name = "%a Divisió d'Inf. Motorizada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió d'Inf. Motorizada" }
+		2 = { "%a Divisió d'Inf. Motorizada" }
+		3 = { "%a Divisió d'Inf. Motorizada" }
+		4 = { "%a Divisió d'Inf. Motorizada" }
+		5 = { "%a Divisió d'Inf. Motorizada" }
+		6 = { "%a Divisió d'Inf. Motorizada" }
+		7 = { "%a Divisió d'Inf. Motorizada" }
+		8 = { "%a Divisió d'Inf. Motorizada" }
+		9 = { "%a Divisió d'Inf. Motorizada" }
+		10 = { "%a Divisió d'Inf. Motorizada" }
+	}
+}
+
+CAT_MEC_01 = 
+{
+	name = "Mechanized Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Divisió Mecanizada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió Mecanizada" }
+		2 = { "%a Divisió Mecanizada" }
+		3 = { "%a Divisió Mecanizada" }
+		4 = { "%a Divisió Mecanizada" }
+		5 = { "%a Divisió Mecanizada" }
+		6 = { "%a Divisió Mecanizada" }
+		7 = { "%a Divisió Mecanizada" }
+		8 = { "%a Divisió Mecanizada" }
+		9 = { "%a Divisió Mecanizada" }
+		10 = { "%a Divisió Mecanizada" }
+	}
+}
+
+CAT_MEC_02 = 
+{
+	name = "Mechanized Infantry"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { CAT_INF_02 }
+
+	fallback_name = "%a Divisió d'Inf. Mecanizada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió d'Inf. Mecanizada" }
+		2 = { "%a Divisió d'Inf. Mecanizada" }
+		3 = { "%a Divisió d'Inf. Mecanizada" }
+		4 = { "%a Divisió d'Inf. Mecanizada" }
+		5 = { "%a Divisió d'Inf. Mecanizada" }
+		6 = { "%a Divisió d'Inf. Mecanizada" }
+		7 = { "%a Divisió d'Inf. Mecanizada" }
+		8 = { "%a Divisió d'Inf. Mecanizada" }
+		9 = { "%a Divisió d'Inf. Mecanizada" }
+		10 = { "%a Divisió d'Inf. Mecanizada" }
+	}
+}
+
+CAT_ARM_01 = 
+{
+	name = "Armored Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Divisió Blindada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió Blindada" }
+		2 = { "%a Divisió Blindada" }
+		3 = { "%a Divisió Blindada" }
+		4 = { "%a Divisió Blindada" }
+		5 = { "%a Divisió Blindada" }
+		6 = { "%a Divisió Blindada" }
+		7 = { "%a Divisió Blindada" }
+		8 = { "%a Divisió Blindada" }
+		9 = { "%a Divisió Blindada" }
+		10 = { "%a Divisió Blindada" }
+	}
+}
+
+CAT_PAR_01 = 
+{
+	name = "Parachute Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Divisió de Paracaidistas"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió de Paracaidistas" }
+		2 = { "%a Divisió de Paracaidistas" }
+		3 = { "%a Divisió de Paracaidistas" }
+		4 = { "%a Divisió de Paracaidistas" }
+		5 = { "%a Divisió de Paracaidistas" }
+		6 = { "%a Divisió de Paracaidistas" }
+		7 = { "%a Divisió de Paracaidistas" }
+		8 = { "%a Divisió de Paracaidistas" }
+		9 = { "%a Divisió de Paracaidistas" }
+		10 = { "%a Divisió de Paracaidistas" }
+	}
+}
+
+CAT_PAR_02 = 
+{
+	name = "Airborne Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Divisió Aerotransportada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió Aerotransportada" }
+		2 = { "%a Divisió Aerotransportada" }
+		3 = { "%a Divisió Aerotransportada" }
+		4 = { "%a Divisió Aerotransportada" }
+		5 = { "%a Divisió Aerotransportada" }
+		6 = { "%a Divisió Aerotransportada" }
+		7 = { "%a Divisió Aerotransportada" }
+		8 = { "%a Divisió Aerotransportada" }
+		9 = { "%a Divisió Aerotransportada" }
+		10 = { "%a Divisió Aerotransportada" }
+	}
+}
+
+CAT_MAR_01 = 
+{
+	name = "Marine Infantry Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Div. d'Infantería de Marina"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Div. d'Infantería de Marina" }
+		2 = { "%a Div. d'Infantería de Marina" }
+		3 = { "%a Div. d'Infantería de Marina" }
+		4 = { "%a Div. d'Infantería de Marina" }
+		5 = { "%a Div. d'Infantería de Marina" }
+		6 = { "%a Div. d'Infantería de Marina" }
+		7 = { "%a Div. d'Infantería de Marina" }
+		8 = { "%a Div. d'Infantería de Marina" }
+		9 = { "%a Div. d'Infantería de Marina" }
+		10 = { "%a Div. d'Infantería de Marina" }
+	}
+}
+
+CAT_MNT_01 = 
+{
+	name = "Mountain Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { CAT_INF_01 }
+
+	fallback_name = "%a Divisió de Muntanya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%a Divisió de Muntanya" }
+		2 = { "%a Divisió de Muntanya" }
+		3 = { "%a Divisió de Muntanya" }
+		4 = { "%a Divisió de Muntanya" }
+		5 = { "%a Divisió de Muntanya" }
+		6 = { "%a Divisió de Muntanya" }
+		7 = { "%a Divisió de Muntanya" }
+		8 = { "%a Divisió de Muntanya" }
+		9 = { "%a Divisió de Muntanya" }
+		10 = { "%a Divisió de Muntanya" }
+	}
+}
+
+CAT_MIL_01 = 
+{
+	name = "Militia Division"
+
+	for_countries = { CAT }
+
+	can_use = { always = yes }
+
+	division_types = { "militia" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAT_MIL_01 }
+
+	fallback_name = "%a Milicies"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "1a Milicies" }
+		2 = { "2a Milicies" }
+		3 = { "3a Milicies" }
+		4 = { "4a Milicies" }
+		5 = { "5a Milicies" }
+		6 = { "6a Milicies" }
+		7 = { "7a Milicies" }
+		8 = { "8a Milicies" }
+		9 = { "9a Milicies" }
+		10 = { "10a Milicies" }
+		11 = { "11a Milicies" }
+		12 = { "12a Milicies" }
+		13 = { "13a Milicies" }
+		14 = { "14a Milicies" }
+		15 = { "15a Milicies" }
+		16 = { "16a Milicies" }
+		17 = { "17a Milicies" }
+		18 = { "18a Milicies" }
+		19 = { "19a Milicies" }
+		20 = { "20a Milicies" }		
+	}
+}

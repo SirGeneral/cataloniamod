@@ -1,0 +1,23 @@
+state={
+	id=836
+	name="STATE_836"
+	history = {
+		owner = CAT
+		add_core_of = CAT
+		victory_points = {
+			6927 10 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+	}
+	provinces={
+		854 6927 9824 11779 
+	}
+	manpower=397163
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	resources= { steel=3 }
+	state_category=large_town
+}

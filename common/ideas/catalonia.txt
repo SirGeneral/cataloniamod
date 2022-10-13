@@ -1,0 +1,1209 @@
+ideas = {
+	country = {
+		CAT_delcare_independence = {
+			picture = hol_the_foundations_of_defense
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.5
+				stability_weekly = 0.002
+				consumer_goods_factor = 0.1
+			}
+		}
+		CAT_independent_administraion = {
+			picture = generic_constitutional_guarantees
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.5
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		CAT_war_independence = {
+			picture = FRA_scw_intervention_republicans_focus
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.1
+			}
+		}	
+		CAT_for_the_fatherland = {
+			picture = FRA_scw_intervention_republicans_focus
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.25
+			}
+		}	
+		CAT_total_mob = {
+			picture = FRA_national_mobilization_focus
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.06
+				stability_factor = -0.05
+			}
+			equipment_bonus = {
+				infantry_weapons = {
+					instant = yes
+					build_cost_ic = -0.10
+				}		
+				
+			}
+		}
+		CAT_treaty_of_barcelona = {
+			picture = EST_democratic_opposition
+			
+			cancel = {
+				ROOT = {
+					has_war = yes
+				}	
+			}
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.005
+				research_speed_factor = -0.1
+				stability_factor = 0.1
+				military_leader_cost_factor = 0.5
+				custom_effect_tooltip = barcelona_custom_tooltip
+			}
+		}
+		
+		
+		CAT_great_depression = {
+			picture = great_depression
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.5
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.2
+				local_resources_factor = -0.3
+			}
+		}
+		CAT_great_depression_2 = {
+			picture = great_depression
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.25
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.1
+				local_resources_factor = -0.2
+			}
+		}
+		CAT_Anti_Foreing_Intervention_Strikes = {
+		
+			picture = chi_war_of_resistance3
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+				
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_factor = -0.2
+				political_power_gain = -0.5
+				war_support_factor = -0.3
+				democratic_drift = 0.15
+				production_speed_buildings_factor = -0.30
+			}
+		}
+		CAT_Catalan_Pacifist_Policy = {
+		
+			picture = air_support_focus
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+				
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				war_support_factor = -0.3
+				guarantee_tension = 1
+				join_faction_tension = 1
+				send_volunteers_tension = 1
+				conscription_factor = -0.3
+				stability_weekly = 0.002
+			}
+		}
+		CAT_catalan_junta = {
+			
+			picture = catalan_junta
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+				
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				army_org_Factor = 0.05
+				planning_speed = 0.25
+			}
+		}
+		CAT_Home_Of_Indusrty = {
+		
+			picture = gov_power
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.02	
+				global_building_slots_factor = 0.5
+				conscription_factor = -0.02
+			}
+		}
+		
+		CAT_css = {
+
+			picture = ast_classify_aliens
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				weekly_manpower = 20
+				resistance_activity = -0.1
+			}
+		}
+		CAT_forced_camps = {
+
+			picture = prc_low_popular_support3
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				non_core_manpower = 0.05
+			}
+		}
+		CAT_equipment_production = {
+			
+			picture = catalan_junta
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+				
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				infantry_weapons = {
+					instant = yes
+					build_cost_ic = -0.10
+				}		
+				artillery = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				
+			}
+		}	
+
+		CAT_air_production = {
+			
+			picture = catalan_junta
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+				
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.08
+				}				
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.08
+				}			
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.08
+				}
+			}	
+			
+		}
+		CAT_german_imperialists = {
+
+			picture = german_advisors
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				training_time_army_factor = -0.2
+				army_org_factor = 0.15
+				conscription = 0.02
+			}
+		}
+		CAT_Catalan_Governamental_Power = {
+		
+			picture = generic_pp_unity_bonus
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+				
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.06
+				political_power_factor = 0.15
+			}
+		}
+		CAT_The_Junts_Amb_Forca = {
+		
+			picture = generic_economic_increase
+
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+				
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.005
+				production_speed_buildings_factor = 0.05
+				political_power_gain = -0.1
+				research_speed_factor = 0.1
+			}
+		}
+		CAT_Technological_Advanced_Army = {
+			
+			picture = generic_research_bonus
+			
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				army_defence_factor = 0.1
+				army_attack_factor = 0.05
+				training_time_army_factor = 0.03
+			}
+		}
+		CAT_peoples_army = {
+			
+			picture = jap_the_unthinkable_option
+			
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				army_defence_factor = 0.15
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.2
+				training_time_army_factor = -0.05
+				army_org_factor = -0.05
+				conscription = 0.03
+				surrender_limit = 1
+			}
+			
+		}
+		CAT_political_assignment = {
+			
+			picture = SOV_system_decentralization
+			
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = -0.3
+				political_advisor_cost_factor = -0.5
+				stability_weekly = 0.005
+			}
+			
+		}
+		CAT_army_corruption = {
+			
+			picture = chi_incompetent_officers
+			
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = -0.06
+				command_power_gain = 0.6
+				experience_gain_army_factor = -0.4
+			}
+			
+		}
+		
+		CAT_army_corruption_1 = {
+			
+			picture = chi_incompetent_officers
+			
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.04	
+				command_power_gain = 0.4
+				experience_gain_army_factor = -0.3
+				political_power_factor = -0.15
+			}
+			
+		}
+		CAT_army_corruption_2 = {
+			
+			picture = chi_incompetent_officers
+			
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.02
+				command_power_gain = 0.4
+				experience_gain_army_factor = -0.1
+				political_power_factor = -0.22
+			}
+			
+		}
+		CAT_stamp_corruption = {
+			
+			picture = generic_oppression
+			
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				drift_defence_factor = 0.1
+				army_attack_factor = -0.13
+				army_defence_factor = -0.16
+				political_power_cost = -0.05
+				army_org_factor = -0.12
+			}
+			
+		}
+		CAT_improved_command = {
+			
+			picture = generic_flexible_foreign_policy
+			
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				command_power_gain = 0.4
+				consumer_goods_factor = -0.02
+				political_power_factor = 0.15
+			}
+			
+		}
+		CAT_align_portgal = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = tfv_can_conscription_crisis
+
+			modifier = {
+				fascism_drift = 0.15
+				fascism_acceptance = 90
+			}
+		}
+		CAT_agressive_approach = {
+			
+			picture = saf_ossewabrandwag_2
+			
+			removal_cost = -1
+			
+			allowed = {
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+				surrender_limit = 1
+				offensive_war_stability_factor = 0.1
+				fascism_drift = 0.03
+			}
+			
+		}
+		CAT_improved_command_1 = {
+			
+			picture = cat_general_staff
+			
+			removal_cost = -1
+			
+			allowed = {		
+				tag = CAT
+			}
+			
+			available = {
+			}
+
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				army_attack_factor = 0.04
+				army_defence_factor = 0.06
+				command_power_gain = 0.5
+				experience_gain_army_factor = 0.15
+				political_power_factor = -0.1
+			}
+			
+		}
+		
+		CAT_alfonso_carlos = {
+			picture = alfonso_carlos
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+				stability_factor = -0.02
+				neutrality_drift = 0.11
+
+			}
+		}
+		CAT_javier_i = {
+			picture = javier_i
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor -0.05
+				war_support_factor = 0.05
+			}
+		}
+		CAT_gold_reserves = {
+			picture = spr_seize_the_gold_reserves
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
+				stability_weekly = -0.01
+				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+			}
+		}	
+		CAT_monarch = {
+			picture = SPR_appropriate_church_riches
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.14
+			}
+		}	
+		CAT_catalan_support = {
+			picture = spa_duty_to_work
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_weekly = 0.006
+				consumer_goods_factor = -0.02
+				production_speed_arms_factory_factor = 0.15
+				offence = 0.05
+				production_speed_infrastructure_factor = 0.1
+			}
+		}	
+		CAT_support_spain = {
+			picture = spr_nationalist_remnants
+			
+			allowed = {
+				tag = CAT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_weekly = 0.002
+				consumer_goods_factor = 0.03
+				conscription = -0.01
+			}
+		}	
+		
+	}	
+	
+	
+	
+	
+	
+	
+	
+	
+	#Tecnologia
+	
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		CAT_taller_bernat = {
+			
+			picture = generic_tank_manufacturer_1
+			
+			allowed = {
+				original_tag = CAT
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+
+		}
+		
+		CAT_hispano_suiza = {
+
+			picture = SPR_hispano_suiza
+			
+			allowed = {
+				original_tag = CAT
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CAT_maquinista = {
+		
+			picture = generic_tank_manufacturer_2
+			
+			allowed = {
+				original_tag = CAT
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	naval_manufacturer = { 			
+		
+		designer = yes
+		
+		CAT_drassanes = {
+			
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				original_tag = CAT
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# fast and well armed
+			}
+			
+			traits = { naval_manufacturer }
+			
+			modifier = {
+				# Weak defence vs air
+			}
+		}
+	}
+	
+	aircraft_manufacturer = { 		
+		designer = yes
+		
+		CAT_construccions_aereonautiques_sa = {
+			
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = CAT
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		CAT_aviacio_de_la_generalitat = {
+			
+			picture = generic_air_manufacturer_1
+
+			
+			allowed = {
+				original_tag = CAT
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		CAT_aeronaval_de_barcelona = {
+			
+			picture = generic_air_manufacturer_3
+
+			
+			allowed = {
+				original_tag = CAT
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { heavy_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+		
+		CAT_fabrica_hidroavions_tarragona = {
+			
+			picture = generic_air_manufacturer_3
+
+			
+			allowed = {
+				original_tag = CAT
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	industrial_concern = {
+	
+		CAT_commisio_dindustries_de_guerra = {
+			
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = CAT
+			}
+		
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+		}
+		
+
+		CAT_electroquimica_de_flix = {
+			
+			picture = generic_refining_concern_1
+
+			allowed = {
+				original_tag = CAT
+			}
+			
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				industry = 0.10
+				synth_resources = 0.155
+			}
+			
+			traits = { refinery_concern }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	materiel_manufacturer = {
+	
+		designer = yes
+	
+		CAT_pirelli = {
+			
+			picture = generic_motorized_equipment_manufacturer_3
+
+			allowed = {
+				original_tag = CAT
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+		
+		CAT_can_castanyer_y_can_simon = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				original_tag = CAT
+			}
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+		
+		CAT_enric_sanchis = {
+			
+			picture = generic_artillery_manufacturer_2
+
+			allowed = {
+				original_tag = CAT
+			}
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+	}
+}	

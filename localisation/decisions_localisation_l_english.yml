@@ -1,0 +1,21 @@
+﻿l_english:
+ CAT_war_plans:0 "Operations"
+ CAT_war_plans_desc:0 "Enables Tactical Bonuses"
+
+ 
+ 
+ CAT_operation_boot:0 "Activate Operation Boot"
+ CAT_operation_gold:0 "Activate Operation Gold"
+ CAT_operation_marble:0 "Activate Operation Marble"
+
+ CAT_ideology_decision:0 "Ideological Breakdown"
+ CAT_follow_fascist_youth:0 "Rally The Fascist Youth"
+
+ CAT_fascist_cat:0 "Rally The Fascists"
+ CAT_propaganda_campaign:0 "Propaganda Campaign"
+ CAT_denounce_opposition:0 "Challange the Opposition"
+ CAT_challange_communists:0 "Challange Communism"
+ CAT_denounce_government:0 "Discredit the Government"
+ CAT_take_administrative_positions:0 "Take Administrative Positions"
+ CAT_take_government_positions:0 "Take Government Positions"
+ CAT_overthrow_government:0 "Secure Political Majority"

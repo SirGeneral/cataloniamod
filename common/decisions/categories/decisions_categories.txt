@@ -1,0 +1,54 @@
+
+simple_category = {
+	allowed = {
+		original_tag = CAT
+	}
+	visible = {
+
+	}
+}
+
+CAT_war_plans = {
+	allowed = {
+		original_tag = CAT
+	}
+	visible = {
+		has_completed_focus = CAT_jaumei_splendor
+	}
+}
+CAT_ideology_decision = {
+	icon = 	power_struggle
+	allowed = {
+		original_tag = CAT
+	}
+	visible = {
+		has_completed_focus = CAT_go_against_popular_pacifism
+	}
+}
+CAT_fascist_cat = {
+    visible = {
+        always = yes
+    }
+    icon = spr_the_seeds_of_revolution
+    allowed = {
+		original_tag = CAT
+	}
+}
+CAT_communist_cat = {
+    visible = {
+        always = yes
+    }
+    icon = decision_category_spr_the_seeds_of_revolution
+    allowed = {
+		original_tag = CAT
+	}
+}
+CAT_monarhist_cat = {
+    visible = {
+        always = yes
+    }
+    icon = decision_category_spr_the_seeds_of_revolution
+    allowed = {
+		original_tag = CAT
+	}
+}

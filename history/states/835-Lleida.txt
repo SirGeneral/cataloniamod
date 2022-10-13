@@ -1,0 +1,24 @@
+state={
+	id=835
+	name="STATE_835"
+	history = {
+		owner = SPR
+		add_core_of = CAT
+		victory_points = {
+			872 15 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+	}
+	provinces={
+		872 897 3898 3899 
+	}
+	manpower=467162
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

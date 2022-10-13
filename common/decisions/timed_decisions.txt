@@ -1,0 +1,80 @@
+#CAT_fascist_cat = {		
+##	
+###	
+#	 simple_timeout_mission = {		#ID of the mission, must not contain spaces!
+##
+#		icon = GFX_decision_icon_default		#The left side icon to show for this mission.
+#		days_mission_timeout = 25	
+#		is_good = yes		
+##		
+#		
+#		
+#		available = {		
+#		}
+#		
+##		fire_only_once = yes		
+#
+#		visible = {		
+#			ROOT = { is_ai = yes}
+#		}
+#
+#		# EFFECTS OF THIS DECISION/MISSION
+#
+#		timeout_effect = {
+#
+#		}		#The effects to execute once the mission timer expires.
+#		
+#		
+#		complete_effect  = {
+##		
+#		}
+#		
+#		# AI LOGIC FOR THIS DECISION/MISSION
+#
+##		ai_will_do = {	#Modifiers for the AI to decide when to execute the mission.
+#			factor = 0
+#		}
+#	}
+#
+#	
+#	timeout_mission_with_remove_effect = {		#ID of the mission, must not contain spaces!
+#
+#		icon = GFX_decision_icon_default		#The left side icon to show for this mission.
+#		days_mission_timeout = 5	#The amount of days remaining until the mission expires and enters remove phase.
+#		days_remove = 5	#How many days the mission will be in remove phase.
+#		is_good = yes		#Determines if the timeout bar will be red or green, cosmetic setting only, has no actual impact on the mission.
+##		
+#		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+###		
+#	#	available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+#			always = no
+#		}
+#		
+#		fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+#
+#		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+#			ROOT = {
+#				is_ai = yes
+#			}	
+#		}
+#
+#		# EFFECTS OF THIS DECISION/MISSION
+#
+#		modifier = {
+#
+#		}
+#
+#		timeout_effect = {		#The effects to execute once the mission timer expires.
+#		}
+#		
+#		remove_effect = {
+#
+#		}
+#		
+#		# AI LOGIC FOR THIS DECISION/MISSION
+#
+#		ai_will_do = {	#Modifiers for the AI to decide when to execute the mission.
+#			factor = 0
+#		}
+#	}	
+#}#

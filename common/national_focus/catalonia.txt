@@ -1,0 +1,2481 @@
+focus_tree = {
+	id = catalonia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CAT
+		}
+	}
+	continuous_focus_position = { x = 40 y = 1500 }
+
+	default = no
+	
+	######WAR######
+	focus = {
+		id = CAT_war_independence
+		icon = GFX_focus_focus_fra_maquis
+		cost = 3
+		x = 57
+		y = 0
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.3
+			add_ideas = CAT_war_independence
+		}
+
+	}
+	focus = {
+		id = CAT_expand_militia
+		icon = GFX_focus_focus_fra_maquis
+		cost = 4
+		x = 55
+		y = 1
+		prerequisite = {
+			focus = CAT_war_independence
+		}
+		completion_reward = {
+			add_manpower = 10000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_total_mobilisation
+		icon = GFX_focus_focus_fra_maquis
+		cost = 4
+		x = 57
+		y = 1
+		prerequisite = {
+			focus = CAT_war_independence
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+			add_war_support = -0.05
+			add_ideas = CAT_total_mob
+		}
+
+	}
+	focus = {
+		id = CAT_why_we_fight
+		icon = GFX_focus_focus_fra_maquis
+		cost = 4
+		x = 59
+		y = 1
+		prerequisite = {
+			focus = CAT_war_independence
+		}
+		completion_reward = {
+			add_manpower = 5000
+			add_stability = 0.1
+			add_war_support = 0.15
+		}
+
+	}
+	focus = {
+		id = Cat_negotiate
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		x = 57
+		y = 2
+		prerequisite = {
+			focus = CAT_expand_militia
+		}
+		prerequisite = {
+			focus = CAT_total_mobilisation
+		}
+		prerequisite = {
+			focus = CAT_why_we_fight
+		}
+		completion_reward = {
+			SPR = {
+				country_event= {
+					hours = 10
+					id = catalonia.14
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_peace
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 1
+		x = 57
+		y = 3
+		available = {
+			NOT = { has_war_with = SPR }
+		}
+		bypass = {
+			NOT = { has_war_with = SPR }
+			has_political_power = 20
+		}
+		completion_reward = {
+			add_political_power = 20
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+	}
+	focus = {
+		id = CAT_administration
+		icon = GFX_focus_cat_national_administration
+		cost = 9
+		x = 57
+		y = 4
+		prerequisite = {
+			focus = CAT_peace
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CAT_delcare_independence
+				add_idea = CAT_independent_administraion
+				days = 160
+			}
+			add_political_power = 10
+		}
+
+	}
+	
+	
+	
+	
+	
+	
+	######INDUSTRY######
+	focus = {
+		id = CAT_great_recovery
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 3
+		y = 0
+		
+		available = {
+			has_completed_focus =  CAT_administration
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+			swap_ideas = { 
+				remove_idea = CAT_great_depression 
+				add_idea = CAT_great_depression_2
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_stablish_bank
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = CAT_great_recovery
+		}
+		mutually_exclusive = {
+			focus = CAT_take_gold
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.1
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1 
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}	
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3 
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}	
+		}
+
+	}
+	focus = {
+		id = CAT_take_gold
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 10
+		prerequisite = {
+			focus = CAT_great_recovery
+		}
+		mutually_exclusive = {
+			focus = CAT_stablish_bank
+		}
+		x = 4
+		y = 1
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.1
+			add_war_support = 0.05
+			add_timed_idea = {
+				idea = CAT_gold_reserves
+				days = 230
+			}
+		}
+		
+
+	}
+	focus = {
+		id = CAT_general_industrialization
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = CAT_stablish_bank
+			focus = CAT_take_gold
+		}
+		
+		x = 2
+		y = 2
+		
+		completion_reward = {
+			add_political_power = 10
+			remove_ideas = CAT_great_depression_2
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = CAT_antoni_sedo
+		}
+	}
+	focus = {
+		id = CAT_industrialization
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = CAT_general_industrialization
+		}
+		
+		x = 1
+		y = 3
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = CAT_Home_Of_Indusrty
+		}
+	}
+	focus = {
+		id = CAT_military_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = CAT_stablish_bank
+			focus = CAT_take_gold
+		}
+		x = 4
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = CAT_josep_moix
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	focus = {
+		id = CAT_catalan_universities
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		prerequisite = {
+			focus = CAT_military_effort
+		}
+		prerequisite = {
+			focus = CAT_general_industrialization
+		}
+		x = 3
+		y = 3
+		completion_reward = {
+			add_ideas = CAT_The_Junts_Amb_Forca
+		}
+
+	}
+	focus = {
+		id = CAT_research_slot
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = CAT_catalan_universities
+		}
+		x = 3
+		y = 4
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	focus = {
+		id = CAT_military_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = CAT_research_slot
+		}
+		x = 4
+		y = 5
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}	
+		}
+	}
+	focus = {
+		id = CAT_military_effort_3
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = CAT_military_effort_2
+		}
+		x = 4
+		y = 6
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}	
+		}
+	}
+	focus = {
+		id = CAT_general_industrialization_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = CAT_research_slot
+		}
+		x = 2
+		y = 5
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_general_industrialization_3
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = CAT_general_industrialization_2
+		}
+		x = 2
+		y = 6
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	######POLITICAL######
+	focus = {
+		id = CAT_political_elections
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		x = 23
+		y = 0
+		available = {
+			has_completed_focus =  CAT_administration
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		completion_reward = {
+			add_political_power = 120
+		}
+
+	}
+	
+	##DEMOCRACY##
+	focus = {
+		id = CAT_fortress_of_europe
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		prerequisite = {
+			focus = CAT_political_elections
+		}
+		mutually_exclusive = {
+			focus = CAT_go_against_popular_pacifism
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		x = 32
+		y = 1
+		completion_reward = {
+			add_political_power = 25
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = CAT_democratic_reform
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10
+		prerequisite = {
+			focus = CAT_fortress_of_europe
+		}
+		mutually_exclusive = {
+			focus = CAT_provisional_national_government
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL  FOCUS_FILTER_PROPAGANDA }
+		x = 32
+		y = 2
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.25
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			add_political_power = 120
+			add_stability = 0.1
+			add_war_support = 0.05
+		}
+
+	}
+	focus = {
+		id = CAT_join_the_allies
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = CAT_democratic_reform
+		}
+		mutually_exclusive = {
+			focus = CAT_democratic_arsenal_coalition
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		x = 31
+		y = 3
+		completion_reward = {
+			ENG = {
+				country_event= {
+					hours = 10
+					id = catalonia.2
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_democratic_arsenal_coalition
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = CAT_democratic_reform
+		}
+		mutually_exclusive = {
+			focus = CAT_join_the_allies
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		x = 33
+		y = 3
+		completion_reward = {
+			create_faction = "Def-co alliance"
+			add_to_faction = SWI
+			add_to_faction = SWE
+			add_to_faction = IRE
+		}
+
+	}
+	focus = {
+		id = CAT_government_integration
+		icon = GFX_goal_continuous_def_against_influence
+		cost = 10
+		prerequisite = {
+			focus = CAT_democratic_arsenal_coalition
+			focus = CAT_join_the_allies
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		x = 32
+		y = 4
+		completion_reward = {
+			add_ideas = CAT_Catalan_Governamental_Power
+		}
+
+	}
+	focus = {
+		id = CAT_invite_democrats
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = {
+			focus = CAT_democratic_arsenal_coalition
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		x = 34
+		y = 4
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.25
+			}
+			add_stability = 0.25
+			remove_ideas = CAT_Catalan_Pacifist_Policy
+		}
+
+	}
+	focus = {
+		id = CAT_safe_exile_shelter
+		icon = GFX_goal_generic_defence
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_government_integration
+			focus = CAT_invite_democrats
+		}
+		x = 33
+		y = 5
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.05
+			add_political_power = -50
+			add_state_claim = 729
+			transfer_state = 729
+			729 = {
+				add_building_construction = {
+					type = bunker
+					province = 4189
+					level = 5
+				}
+			}
+		}
+
+	}
+	
+	focus = {
+		id = CAT_allied_supplies
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_government_integration
+		}
+		x = 31
+		y = 5
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+			}
+			add_war_support = 0.1
+		}
+
+	}
+	##AGAINST##
+	focus = {
+		id = CAT_go_against_popular_pacifism
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_political_elections
+		}
+		mutually_exclusive = {
+			focus = CAT_fortress_of_europe
+		}
+		x = 15
+		y = 1
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = -0.05
+			unlock_decision_category_tooltip = CAT_ideology_decision
+		}
+	}
+	focus = {
+		id = CAT_force_government
+		icon = GFX_focus_CAT_fascist_troops
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+
+		prerequisite = {
+			focus = CAT_go_against_popular_pacifism
+		}
+		available = {
+			democratic < 0.15
+			communism < 0.1
+			neutrality < 0.2
+			has_global_flag = CAT_fascist_following_ended
+
+		}
+		mutually_exclusive = {
+			focus = CAT_red_spread
+		}
+		mutually_exclusive = {
+			focus = CAT_a_new_monarch
+		}
+		x = 12
+		y = 2
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+			hidden_effect = {
+				CAT = {
+					country_event= {
+						hours = 20
+						id = catalonia.1
+					}	
+				}
+			}
+			custom_effect_tooltip = 1_fascism_tooltip
+			
+		}
+
+	}
+	focus = {
+		id = CAT_evil_pact
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_force_government
+		}
+		x = 12
+		y = 3
+		available = {
+			has_government = fascism
+		}
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = {
+					target = CAT
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = CAT_create_the_css
+		icon = GFX_goal_rhineland
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_evil_pact
+		}
+		x = 6
+		y = 5
+		completion_reward = {
+			add_manpower = 10000
+			add_ideas = CAT_css
+			delete_unit_template_and_units = { division_template = "National Milicia" }
+		}
+
+	}
+	focus = {
+		id = CAT_national_storm_units
+		icon = GFX_focus_generic_army_tanks2
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_create_the_css
+		}
+		x = 6
+		y = 6
+		completion_reward = {
+			add_manpower = 2000
+			add_war_support = 0.03
+			add_stability = -0.02
+		}
+
+	}
+	focus = {
+		id = CAT_forced_laboured_camps
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_national_storm_units
+		}
+		prerequisite = {
+			focus = CAT_military_effort_3
+		}
+		x = 5
+		y = 7
+		completion_reward = {
+			add_manpower = 1000
+			add_ideas = CAT_forced_camps
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}	
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}
+
+	}
+	focus = {
+		id = CAT_full_gov_power
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_evil_pact
+		}
+		available = {
+			has_global_flag = CAT_civil_war_ended
+		}
+		x = 10
+		y = 5
+		completion_reward = {
+			add_political_power = 120
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+			add_stability = 0.15
+			remove_ideas = CAT_Catalan_Pacifist_Policy
+			add_ideas = CAT_Catalan_Governamental_Power
+			
+		}
+
+	}
+	focus = {
+		id = CAT_our_own
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_full_gov_power
+		}
+		mutually_exclusive = {
+			focus = CAT_join_germany
+		}
+		mutually_exclusive = {
+			focus = CAT_ally_with_italy
+		}
+		x = 8
+		y = 6
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.50
+			}
+			add_stability = 0.1
+			add_war_support = 0.05
+			set_rule = { can_create_factions = yes }
+		}
+
+	}
+	focus = {
+		id = CAT_ally_with_italy
+		icon = GFX_focus_generic_italy_first
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_full_gov_power
+		}
+		mutually_exclusive = {
+			focus = CAT_join_germany
+		}
+		mutually_exclusive = {
+			focus = CAT_our_own
+		}
+		available = {
+			ITA = {
+				has_government = fascism
+			}
+		}
+		x = 12
+		y = 6
+		completion_reward = {
+			ITA = {
+				create_faction = "Novus Latinum"
+				add_to_faction = CAT
+			}	
+		}
+
+	}
+	focus = {
+		id = CAT_join_germany
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_full_gov_power
+		}
+		available = {
+			GER = {
+				has_government = fascism
+			}
+		}
+		mutually_exclusive = {
+			focus = CAT_our_own
+			focus = CAT_ally_with_italy
+		}
+		x = 10
+		y = 6
+		completion_reward = {
+			GER = {
+				country_event= {
+					hours = 3
+					id = catalonia.9
+				}	
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_army_reform
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_ally_with_italy
+			focus = CAT_join_germany
+			focus = CAT_our_own
+		}
+		prerequisite = {
+			focus = CAT_centralised_command
+		}
+		x = 14
+		y = 7
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = CAT_army_corruption 
+				add_idea = CAT_army_corruption_1
+			}
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = CAT_stamp_on_corruption
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL   }
+		prerequisite = {
+			focus = CAT_army_reform
+		}
+		x = 16
+		y = 8
+		completion_reward = {
+			add_political_power = -20
+			add_stability = 0.04
+			swap_ideas = { 
+				remove_idea = CAT_army_corruption_1 
+				add_idea = CAT_army_corruption_2
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_technological_advancements
+		icon = GFX_focus_generic_combined_arms
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+		prerequisite = {
+			focus = CAT_army_reform
+		}	
+		x = 14
+		y = 8
+		completion_reward = {
+			add_ideas = CAT_Technological_Advanced_Army
+		}
+
+	}
+	focus = {
+		id = CAT_arrest_corrupt_leaders
+		icon = GFX_focus_cat_conspiracy
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+		prerequisite = {
+			focus = CAT_technological_advancements
+		}	
+		prerequisite = {
+			focus = CAT_stamp_on_corruption
+		}
+		x = 15
+		y = 9
+		completion_reward = {
+			remove_ideas = CAT_army_corruption_2
+			add_stability = -0.05
+		}
+
+	}
+	focus = {
+		id = CAT_the_circle
+		icon = GFX_focus_CAT_infiltration
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+		prerequisite = {
+			focus = CAT_army_reform
+		}
+		prerequisite = {
+			focus = CAT_dictator_for_life
+		}
+		x = 12
+		y = 8
+		completion_reward = {
+			add_ideas = CAT_improved_command
+		}
+
+	}
+	focus = {
+		id = CAT_fascist_junta
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+		prerequisite = {
+			focus = CAT_our_own
+			focus = CAT_join_germany
+			focus = CAT_ally_with_italy
+		}
+		mutually_exclusive = {
+			focus = CAT_dictator_for_life
+		}
+		x = 9
+		y = 7
+		completion_reward = {
+			add_political_power = -10
+			add_stability = 0.05
+			add_war_support = 0.05
+			delete_unit_template_and_units = { division_template = "Brigada D'Infantería" }
+		}
+	}
+	focus = {
+		id = CAT_improved_command_focus
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = CAT_fascist_junta
+		}
+		x = 8
+		y = 8
+		search_filters = { FOCUS_FILTER_ARMY_XP  }
+		completion_reward = {
+			add_political_power = -10
+			add_ideas = CAT_improved_command_1
+		}
+
+	}
+	focus = {
+		id = CAT_ideological_warfare
+		icon = GFX_focus_cat_national_security
+		cost = 10
+		prerequisite = {
+			focus = CAT_improved_command_focus	
+			focus = CAT_political_determination
+		}
+		x = 9
+		y = 9
+		completion_reward = {
+			add_political_power = -10
+			add_ideas = CAT_catalan_junta
+		}
+
+	}
+	focus = {
+		id = CAT_political_determination
+		icon = GFX_focus_cat_fascism_ideology
+		cost = 10
+		prerequisite = {
+			focus = CAT_dictator_for_life
+			focus = CAT_fascist_junta
+		}
+		x = 10
+		y = 8
+		completion_reward = {
+			add_political_power = 20
+			add_timed_idea = {
+				idea = CAT_agressive_approach
+				days = 260
+			}
+			add_stability = 0.1
+		}
+
+	}
+	focus = {
+		id = CAT_spanish_subligation
+		icon = GFX_focus_spr_no_pasaran
+		cost = 10
+		prerequisite = {
+			focus = CAT_political_determination
+		}
+		prerequisite = {
+			focus = CAT_technological_advancements
+		}
+		mutually_exclusive{
+			focus = CAT_spanish_alliance
+		}
+		available = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				SPR = { has_civil_war = no }
+				any_other_country = {
+					original_tag = SPR
+					NOT = {
+						has_government = fascism
+					}
+					NOT = { is_in_faction_with = CAT }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR = {
+					exists = yes
+					has_civil_war = no
+					NOT = {
+						has_government = fascism
+					}
+					NOT = { is_in_faction_with = CAT }
+				}
+			}
+		}	
+		x = 13
+		y = 9
+		completion_reward = {
+			add_political_power = 20
+			create_wargoal = {
+				type = take_state_focus
+				target = SPR
+				generator = { 794 167 166 177 }
+			}
+			add_state_core = 177
+			add_state_core = 166
+			add_state_core = 167
+			add_state_core = 794
+		}
+
+	}
+	focus = {
+		id = CAT_spanish_integration
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 10
+		prerequisite = {
+			focus = CAT_spanish_subligation
+		}
+		prerequisite = {
+			focus = CAT_arrest_corrupt_leaders
+		}
+		available = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				SPR = { exists = yes }
+			}
+			
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR = { exists = yes }
+			}
+			controls_state = 177
+			controls_state = 166
+			controls_state = 167
+			controls_state = 794
+		}	
+		x = 14
+		y = 10
+		completion_reward = {
+			puppet = SPR
+			SPR = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_spanish_cooperation
+		icon = GFX_focus_intervention_spain_nationalists
+		cost = 10
+		prerequisite = {
+			focus = CAT_political_determination
+		}
+		mutually_exclusive{
+			focus = CAT_spanish_subligation
+		}
+		available = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				SPR = { has_civil_war = no }
+				any_other_country = {
+					original_tag = SPR
+					has_government = fascism
+					NOT = { has_war_with = CAT }
+					NOT = { is_in_faction_with = CAT }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = {
+					exists = yes
+					has_civil_war = no
+					NOT = { has_war_with = CAT }
+					NOT = { is_in_faction_with = CAT }
+					NOT = { has_completed_focus = SPA_join_the_allies }
+				}
+			}
+		}	
+			
+		
+		x = 11
+		y = 9
+		completion_reward = {
+		if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				random_other_country = {
+					limit = {
+						original_tag = SPR
+						has_government = fascism
+					}
+					SPR = {
+						add_opinion_modifier = {
+							target = CAT
+							modifier = large_increase
+						}
+						add_popularity = {
+							ideology = fascism
+							popularity = 0.5
+						}	
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = {
+					
+					add_opinion_modifier = {
+						target = CAT
+						modifier = large_increase
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.5
+					}	
+				}
+			}
+		}
+		
+
+	}
+	focus = {
+		id = CAT_spanish_italian_alliance
+		icon = GFX_focus_befriend_italy
+		cost = 10
+		prerequisite = {
+			focus = CAT_spanish_cooperation
+		}
+		available = { CAT = { is_in_faction_with = ITA } }
+		
+		x = 12
+		y = 10
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				random_other_country = {
+					limit = {
+						original_tag = SPR
+						has_government = fascism
+					}
+					remove_ideas = SPA_recovering_from_civil_war
+					SPR = {
+						add_opinion_modifier = {
+							target = CAT
+							modifier = large_increase
+						}
+						add_opinion_modifier = {
+							target = ITA
+							modifier = large_increase
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = {
+					remove_ideas = SPA_recovering_from_civil_war
+					
+					add_opinion_modifier = {
+						target = CAT
+						modifier = large_increase
+					}
+					add_opinion_modifier = {
+						target = ITA
+						modifier = large_increase
+					}
+					
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_spanish_german_alliance
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 10
+		prerequisite = {
+			focus = CAT_spanish_cooperation
+		}
+		available = { CAT = { is_in_faction_with = GER } }
+		
+		x = 10
+		y = 10
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				random_other_country = {
+					limit = {
+						original_tag = SPR
+						has_government = fascism
+					}
+					remove_ideas = SPA_recovering_from_civil_war
+					SPR = {
+						add_opinion_modifier = {
+							target = CAT
+							modifier = large_increase
+						}
+						add_opinion_modifier = {
+							target = GER
+							modifier = large_increase
+						}
+					}
+					
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = {
+					remove_ideas = SPA_recovering_from_civil_war
+					
+					add_opinion_modifier = {
+						target = CAT
+						modifier = large_increase
+					}
+					add_opinion_modifier = {
+						target = GER
+						modifier = large_increase
+					}
+					
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_spanish_catalan_alliance
+		icon = GFX_focus_spa_unify_the_nationalist_front
+		cost = 10
+		prerequisite = {
+			focus = CAT_spanish_cooperation
+		}
+		available = { CAT = { NOT = { is_in_faction_with = GER } NOT = { is_in_faction_with = ITA } } }
+		
+		x = 8
+		y = 10
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				random_other_country = {
+					limit = {
+						original_tag = SPR
+						has_government = fascism
+					}
+					remove_ideas = SPA_recovering_from_civil_war
+					SPR = {
+						add_opinion_modifier = {
+							target = CAT
+							modifier = large_increase
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = {
+					remove_ideas = SPA_recovering_from_civil_war
+					
+					add_opinion_modifier = {
+						target = CAT
+						modifier = large_increase
+					}
+					
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_iberian_nationalist_front
+		icon = GFX_focus_por_iberian_summit
+		cost = 10
+		prerequisite = {
+			focus = CAT_spanish_catalan_alliance
+		}
+		available = { 
+			POR = {
+				NOT = { has_government = communism }
+				NOT = { has_government = democratic }
+				NOT = { has_war_with = CAT}
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				any_other_country = {
+					original_tag = SPR
+					NOT = { has_war_with = POR }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = {
+					exists = yes
+					NOT = { has_war_with = POR }
+				}
+			}
+		}
+			
+		
+		x = 8
+		y = 11
+		completion_reward = {
+			POR = {
+				add_opinion_modifier = {
+						target = CAT
+						modifier = huge_increase
+				}
+				add_timed_idea = {
+					idea = CAT_align_portgal
+					days = 360
+				}
+			}
+			
+		}
+	}
+	focus = {
+		id = CAT_dictator_for_life
+		icon = GFX_focus_generic_military_dictatorship
+		cost = 10
+		prerequisite = {
+			focus = CAT_our_own
+			focus = CAT_join_germany
+			focus = CAT_ally_with_italy
+		}
+		mutually_exclusive = {
+			focus = CAT_fascist_junta
+		}
+		x = 11
+		y = 7
+		completion_reward = {
+			delete_unit_template_and_units = { division_template = "Brigada D'Infantería" }
+		}
+
+	}
+	focus = {
+		id = CAT_arm_the_masses
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		cost = 10
+		prerequisite = {
+			focus = CAT_idelological_fanatics
+		}
+		mutually_exclusive = {
+			focus = CAT_people_army
+		}
+		x = 15
+		y = 5
+		completion_reward = {
+			add_manpower = 10000
+			add_stability = -0.05
+			add_ideas = CAT_total_mob
+		}
+
+	}
+	focus = {
+		id = CAT_centralised_command
+		icon = GFX_focus_CAT_penal_battalions
+		cost = 10
+		prerequisite = {
+			focus = CAT_arm_the_masses
+		}
+		x = 15
+		y = 6
+		completion_reward = {
+			add_ideas = CAT_army_corruption
+		}
+
+	}
+	focus = {
+		id = CAT_investigation_comissar
+		icon = GFX_focus_CAT_military_purge
+		cost = 10
+		prerequisite = {
+			focus = CAT_centralised_command
+		}
+		available = {
+			has_completed_focus	= CAT_red_spread
+		}
+		x = 18
+		y = 7
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = CAT_army_corruption_1 
+				add_idea = CAT_army_corruption_2
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_target_corrupt_leaders
+		icon = GFX_focus_CAT_court
+		cost = 10
+		prerequisite = {
+			focus = CAT_investigation_comissar
+		}
+		available = {
+			has_completed_focus	= CAT_red_spread
+		}
+		x = 18
+		y = 8
+		completion_reward = {
+			add_timed_idea = {
+				idea =	CAT_stamp_corruption
+				days = 100
+			}
+			remove_ideas = CAT_army_corruption_2
+		}
+
+	}
+	
+	
+	
+	focus = {
+		id = CAT_red_spread
+		icon = GFX_focus_generic_join_comintern
+		cost = 10
+		prerequisite = {
+			focus = CAT_go_against_popular_pacifism
+		}
+		mutually_exclusive = {
+			focus = CAT_a_new_monarch
+		}
+		mutually_exclusive = {
+			focus =  CAT_force_government
+		}
+		available = {
+			democratic < 0.2
+			fascism < 0.1
+			neutrality < 0.2
+		}
+		x = 20
+		y = 2
+		completion_reward = {
+			add_political_power = 120
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+			}
+			remove_ideas = CAT_Catalan_Pacifist_Policy
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			
+		}
+
+	}
+	focus = {
+		id = CAT_soviet_diplomats
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10
+		prerequisite = {
+			focus = CAT_red_spread
+		}
+		mutually_exclusive = {
+			focus = CAT_stay_on_our_own
+		}
+		x = 19
+		y = 3
+		completion_reward = {
+			add_political_power = 25
+			SOV = {
+				add_opinion_modifier = {
+					target = CAT
+					modifier = large_increase
+				}
+			}
+		}
+		
+
+	}
+	focus = {
+		id = CAT_idelological_fanatics
+		icon = GFX_focus_generic_manpower
+		cost = 10
+		prerequisite = {
+			focus = CAT_evil_pact
+			focus = CAT_soviet_diplomats
+		}
+		x = 15
+		y = 4
+		completion_reward = {
+			add_manpower = 1000
+		}
+		
+
+	}
+	focus = {
+		id = CAT_join_commintern
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 10
+		prerequisite = {
+			focus = CAT_soviet_diplomats
+		}
+		x = 18
+		y = 4
+		completion_reward = {
+			SOV = {
+				country_event= {
+					hours = 3
+					id = catalonia.8
+				}	
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_people_army
+		icon = GFX_focus_CAT_organization_centralization_discipline
+		cost = 10
+		prerequisite = {
+			focus = CAT_join_commintern
+			focus = CAT_political_assignment
+		}
+		mutually_exclusive = {
+			focus = CAT_arm_the_masses
+		}
+		x = 18
+		y = 5
+		completion_reward = {
+			add_ideas = CAT_peoples_army
+			
+		}
+
+	}
+	focus = {
+		id = CAT_stay_on_our_own
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 10
+		prerequisite = {
+			focus = CAT_red_spread
+		}
+		mutually_exclusive = {
+			focus = CAT_soviet_diplomats
+		}
+		x = 22
+		y = 3
+		completion_reward = {
+			add_political_power = 25
+			SOV = {
+				add_opinion_modifier = {
+					target = CAT
+					modifier = small_decrease
+				}
+			}
+			set_rule = { can_create_factions = yes }
+		}
+
+	}
+	focus = {
+		id = CAT_political_assignment
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 10
+		prerequisite = {
+			focus = CAT_stay_on_our_own
+			focus = CAT_soviet_diplomats
+		}
+		x = 20
+		y = 4
+		completion_reward = {
+			add_political_power = -25
+			add_timed_idea = {
+				idea = CAT_political_assignment
+				days = 180
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_form_international
+		icon = GFX_goal_support_fourth_int
+		cost = 10
+		prerequisite = {
+			focus = CAT_stay_on_our_own
+		}
+		x = 22
+		y = 5
+		completion_reward = {
+			CAT = {
+				create_faction = "The New International"
+			}
+		}
+		
+	}	
+	focus = {
+		id = CAT_agressive_directions
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = CAT_form_international
+			focus = CAT_people_army
+		}
+		available = {
+		}
+		x = 21
+		y = 6
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = -0.05
+			add_timed_idea = {
+				idea = CAT_Anti_Foreing_Intervention_Strikes
+				days = 120
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_iberian_union_of_comunes
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = CAT_agressive_directions
+		}
+		available = {
+			has_army_manpower = { size > 100000 }
+			NOT = { is_in_faction_with = SPR }
+			NOT = { SPR = { has_government = communism } }
+		}
+		x = 21
+		y = 7
+		completion_reward = {
+			add_manpower = 2000
+			create_wargoal = {	
+				type = annex_everything
+				target = SPR
+			}
+		}
+
+	}
+	
+	##MONARCHY##
+	focus = {
+		id = CAT_a_new_monarch
+		icon = GFX_focus_generic_monarchy_2
+		cost = 10
+		prerequisite = {
+			focus = CAT_go_against_popular_pacifism
+			
+		}
+	
+		mutually_exclusive = {
+			focus = CAT_force_government
+		}
+		mutually_exclusive = {
+			focus = CAT_red_spread
+		}
+		x = 26
+		y = 2
+		completion_reward = {
+			add_political_power = 120
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_timed_idea = {
+				idea = CAT_monarch
+				days = 120
+			}
+			
+		}
+
+	}
+	focus = {
+		id = CAT_the_final_election
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 10
+		prerequisite = {
+			focus = CAT_a_new_monarch
+		}
+		available = {
+			democratic < 0.15
+			communism < 0.1
+			fascism < 0.1
+		}
+		x = 26
+		y = 3
+		completion_reward = {
+			country_event= {
+				hours = 3
+				id = catalonia.16
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_crush_the_opposition
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10
+		prerequisite = {
+			focus = CAT_the_final_election
+		}
+		x = 26
+		y = 4
+		completion_reward = {
+			add_stability = -0.05
+			remove_ideas = CAT_Catalan_Pacifist_Policy
+			add_political_power = 25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.50
+			}
+		}
+	}
+	focus = {
+		id = CAT_rearm_the_army
+		icon = GFX_focus_secret_rearmament
+		cost = 10
+		prerequisite = {
+			focus = CAT_crush_the_opposition
+		}
+		x = 24
+		y = 5
+		completion_reward = {
+			add_ideas = CAT_catalan_junta
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+			}
+		}	
+
+	}
+	focus = {
+		id = CAT_german_imperialist_training
+		icon = GFX_focus_ger_oppose_hitler
+		cost = 10
+		prerequisite = {
+			focus = CAT_rearm_the_army
+		}
+		x = 23
+		y = 6
+		completion_reward = {
+			add_ideas = CAT_german_imperialists
+		}
+
+	}
+	focus = {
+		id = CAT_combine_ger_cat_tec
+		icon = GFX_focus_generic_license_production
+		cost = 10
+		prerequisite = {
+			focus = CAT_rearm_the_army
+		}
+		x = 25
+		y = 6
+		completion_reward = {
+			add_ideas = CAT_Technological_Advanced_Army
+		}
+
+	}
+	focus = {
+		id = CAT_national_reform
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10
+		prerequisite = {
+			focus = CAT_crush_the_opposition
+		}
+		x = 28
+		y = 5
+		completion_reward = {
+			add_ideas = CAT_Catalan_Governamental_Power
+		}
+
+	}
+	focus = {
+		id = CAT_carlist_king
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+		cost = 10
+		available = {
+			has_country_leader = {
+				name = "Alfonso Carlos"
+				ruling_only = yes
+			}
+		}
+		prerequisite = {
+			focus = CAT_national_reform
+		}
+		mutually_exclusive = {
+			focus = CAT_bourbonic_king
+		}
+		x = 27
+		y = 6
+		completion_reward = {
+			add_ideas = CAT_alfonso_carlos
+			add_political_power = 50
+			add_stability = 0.03
+		}
+
+	}
+	focus = {
+		id = CAT_retake_old_lands
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = CAT_carlist_king
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 30000 }
+		}
+		x = 26
+		y = 7
+		completion_reward = {
+			add_state_core = 794
+			add_state_core = 166
+			add_state_core = 167
+			add_state_core = 177
+			add_state_claim = 114
+			add_state_claim = 115
+			add_state_claim = 156
+			add_state_claim = 117
+			add_state_claim = 47
+		}
+
+	}
+	focus = {
+		id = CAT_jaumei_splendor
+		icon = GFX_goal_catalonia
+		cost = 10
+		prerequisite = {
+			focus = CAT_retake_old_lands
+		}
+		x = 26
+		y = 8
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+			add_political_power = 150
+		}
+
+	}
+	focus = {
+		id = CAT_operation_gold
+		icon = GFX_focus_focus_fra_intervention_spain
+		cost = 10
+		prerequisite = {
+			focus = CAT_jaumei_splendor
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 135000 }
+			NOT = { is_in_faction_with = SPR }
+		}
+		x = 24
+		y = 9
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SPR
+				generator = { 794 166 157 177 }
+			}
+			unlock_decision_tooltip = { decision = CAT_operation_gold show_effect_tooltip = yes show_modifiers = no }
+		}
+
+	}
+	focus = {
+		id = CAT_operation_boot
+		icon = GFX_focus_attack_italy
+		cost = 10
+		prerequisite = {
+			focus = CAT_jaumei_splendor
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 150000 }
+			NOT = { is_in_faction_with = ITA }
+		}
+		x = 26
+		y = 9
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ITA
+				generator = { 114 115 156 117 }
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = CAT_operation_boot show_effect_tooltip = yes show_modifiers = no }
+		}
+
+	}
+	focus = {
+		id = CAT_operation_marble
+		icon = GFX_focus_generic_attack_greece
+		cost = 10
+		prerequisite = {
+			focus = CAT_jaumei_splendor
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 100000 }
+			NOT = { is_in_faction_with = GRE }
+		}
+		x = 28
+		y = 9
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = GRE
+				generator = { 47 }
+			}
+			unlock_decision_tooltip = { decision = CAT_operation_marble show_effect_tooltip = yes show_modifiers = no }
+		}
+
+	}
+	focus = {
+		id = CAT_bourbonic_king
+		icon = GFX_focus_focus_fra_orleans_restoration
+		cost = 10
+		available = {
+			has_country_leader = {
+				name = "Javier I"
+				ruling_only = yes
+			}
+		}
+		prerequisite = {
+			focus = CAT_national_reform
+		}
+		mutually_exclusive = {
+			focus = CAT_carlist_king
+		}
+		x = 29
+		y = 6
+		completion_reward = {
+			add_ideas = CAT_javier_i
+			add_stability = -0.05
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = CAT_support_nationalists
+		icon = GFX_focus_intervention_spain_nationalists
+		cost = 10
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 10000 }
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				NOT = { is_at_war_with = D01 }
+				
+			}
+			
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				NOT = { is_at_war_with = SPA }
+			}
+		}
+		prerequisite = {
+			focus = CAT_bourbonic_king
+		}
+		x = 30
+		y = 7
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				D01 = {
+					add_timed_idea = {
+						idea = CAT_catalan_support
+						days = 150
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = {
+					add_timed_idea = {
+						idea = CAT_catalan_support
+						days = 150
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = CAT_support_spain
+				days = 150
+			}
+			
+		}
+
+	}
+	focus = {
+		id = CAT_spanish_king_alliance
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		available = {
+			SPR = {
+				has_government = fascism	
+			}	
+		}	
+		prerequisite = {
+			focus = CAT_support_nationalists
+		}
+		x = 30
+		y = 8
+		completion_reward = {
+			D01 = {
+				country_event= {
+					hours = 3
+					id = catalonia.11
+				}	
+			}
+		}
+	}
+	
+	
+	
+	######ARMY######
+	
+	##LAND##
+	focus = {
+		id = CAT_stablish_army
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		x = 50
+		y = 0
+		available = {
+			has_completed_focus =  CAT_administration
+		}
+		completion_reward = {
+			army_experience = 15
+		}
+
+	}
+	focus = {
+		id = CAT_focus_on_land
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = CAT_stablish_army
+		}
+		x = 48
+		y = 1
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_equipment_production
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10
+		prerequisite = {
+			focus = CAT_focus_on_land
+		}
+		x = 48
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+			add_ideas = CAT_equipment_production
+		}
+
+	}
+	focus = {
+		id = CAT_armour_research
+		icon = GFX_goal_generic_production2
+		cost = 10
+		prerequisite = {
+			focus = CAT_equipment_production
+		}
+		x = 48
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}	
+	}
+	focus = {
+		id = CAT_motorized
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		prerequisite = {
+			focus = CAT_armour_research
+		}
+		x = 47
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_tankery
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		prerequisite = {
+			focus = CAT_armour_research
+		}
+		x = 49
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 3
+				category = armor
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_combine_inf_tanks
+		icon = GFX_goal_generic_build_tank
+		cost = 10
+		prerequisite = {
+			focus = CAT_motorized
+		}
+		prerequisite = {
+			focus = CAT_tankery
+		}
+		x = 48
+		y = 5
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				uses = 2
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+			
+		}
+
+	}
+	##AIR##
+	focus = {
+		id = CAT_focus_on_air
+		icon = GFX_goal_generic_air_fighter
+		cost = 10
+		prerequisite = {
+			focus = CAT_stablish_army
+		}
+		x = 52
+		y = 1
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.4
+				uses = 1
+				category = air_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_air_investment
+		icon = GFX_goal_continuous_air_production
+		cost = 10
+		prerequisite = {
+			focus = CAT_focus_on_air
+		}
+		x = 52
+		y = 2
+		completion_reward = {
+			add_ideas = CAT_air_production
+		}
+
+	}
+	focus = {
+		id = CAT_focus_small_av
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10
+		prerequisite = {
+			focus = CAT_air_investment
+		}
+		mutually_exclusive = {
+			focus = CAT_huge_force
+		}
+		x = 51
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+			air_experience = 10
+			add_war_support = 0.05
+		}	
+
+	}
+	focus = {
+		id = CAT_huge_force
+		icon = GFX_goal_generic_air_fighter
+		cost = 10
+		prerequisite = {
+			focus = CAT_air_investment
+		}
+		mutually_exclusive = {
+			focus = CAT_focus_small_av
+		}
+		x = 53
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.4
+				uses = 1
+				category = cat_strategic_bomber
+			}	
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.4
+				uses = 1
+				category = tactical_bomber
+			}
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.3
+				uses = 1
+				category = light_fighter
+			}
+		}
+
+
+	}
+	focus = {
+		id = CAT_air_doctrine
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10
+		prerequisite = {
+			focus = CAT_focus_small_av
+			focus = CAT_huge_force
+		}
+		x = 52
+		y = 4
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.6
+				uses = 1
+				category = air_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = CAT_strategic_bombing
+		icon = GFX_goal_generic_air_bomber
+		cost = 10
+		prerequisite = {
+			focus = CAT_air_doctrine
+		}
+		x = 53
+		y = 5
+
+	}
+	focus = {
+		id = CAT_land_support
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10
+		prerequisite = {
+			focus = CAT_air_doctrine
+		}
+		x = 51
+		y = 5
+	
+	}
+}

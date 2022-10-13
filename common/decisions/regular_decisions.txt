@@ -1,0 +1,295 @@
+
+CAT_war_plans = {		#Name of category that decisions will appear under, decisions MUST have a category to work properly.
+	
+	CAT_operation_boot = {
+		icon = generic_operation
+		available = {
+			has_war_with = ITA
+		}
+		visible = {
+			has_completed_focus = CAT_operation_boot
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 280
+		targeted_modifier = {
+			tag = ITA
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	CAT_operation_gold = {
+		icon = generic_operation
+		available = {
+			has_war_with = SPR
+		}
+		visible = {
+			has_completed_focus = CAT_operation_gold
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 280
+		targeted_modifier = {
+			tag = SPR
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	CAT_operation_marble = {
+		icon = generic_operation
+		available = {
+			has_war_with = GRE
+		}
+		visible = {
+			has_completed_focus = CAT_operation_marble
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 280
+		targeted_modifier = {
+			tag = GRE
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+}
+CAT_ideology_decision = {
+
+	CAT_follow_fascist_youth = {
+		icon = 	generic_military
+		cost = 10
+		available = {
+		}
+		visible = {
+			has_completed_focus = CAT_go_against_popular_pacifism
+			NOT = {
+				has_global_flag = CAT_fascist_following
+			}
+			NOT = {
+				has_global_flag = CAT_fascist_following_ended
+			}
+		}
+			
+		ai_will_do = {
+			factor = 0.25
+		}
+		fire_only_once = yes
+		days_remove = 0
+		remove_effect = {
+			set_global_flag = CAT_fascist_following
+			add_popularity = {
+   				ideology = fascism
+    			popularity = 0.05
+			}
+		}
+	}
+	
+
+}
+
+CAT_fascist_cat = {
+	CAT_propaganda_campaign = {
+		icon = eng_propaganda_campaigns
+		cost = 25
+		available = {
+		}
+		visible = {
+			has_completed_focus = CAT_go_against_popular_pacifism
+			has_global_flag = CAT_fascist_following	
+			NOT = {
+				has_government = fascism
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		fire_only_once = no
+		days_remove = 40
+		modifier = {
+			fascism_drift = 0.05
+			political_power_factor = -0.1
+		}
+		remove_effect = {
+			add_popularity = {
+   				ideology = fascism
+    			popularity = 0.04
+			}
+		}
+	}
+	CAT_challange_communists = {
+		icon = generic_nationalism
+		cost = 20
+		available = {
+			communism > 0.1
+		}
+		visible = {
+			has_completed_focus = CAT_go_against_popular_pacifism
+			has_global_flag = CAT_fascist_following	
+			NOT = {
+				has_government = fascism
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		fire_only_once = no
+		days_remove = 35
+		modifier = {
+			communism_drift = -0.08
+			political_power_factor = -0.1
+			stability_weekly = -0.05
+		}
+	}
+	CAT_denounce_opposition = {
+		icon = generic_nationalism
+		cost = 20
+		available = {
+			neutrality > 0.1
+		}
+		visible = {
+			has_completed_focus = CAT_go_against_popular_pacifism
+			has_global_flag = CAT_fascist_following	
+			NOT = {
+				has_government = fascism
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		fire_only_once = no
+		days_remove = 35
+		modifier = {
+			neutrality_drift = -0.06
+			political_power_factor = -0.1
+			stability_weekly = -0.02
+		}
+	}
+	CAT_denounce_government = {
+		icon = generic_break_treaty
+		cost = 20
+		available = {
+			NOT = {
+				has_stability = 0.7
+			}
+		}
+		visible = {
+			has_completed_focus = CAT_go_against_popular_pacifism
+			has_global_flag = CAT_fascist_following	
+			NOT = {
+				has_government = fascism
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		fire_only_once = no
+		days_remove = 35
+		modifier = {
+			democratic_drift = -0.06
+			political_power_factor = -0.1
+		}
+	}
+	CAT_take_administrative_positions = {
+		icon = eng_trade_unions_support
+		cost = 30
+		available = {
+			fascism > 0.2
+		}
+		visible = {
+			has_completed_focus = CAT_go_against_popular_pacifism
+			has_global_flag = CAT_fascist_following	
+			NOT = {
+				has_government = fascism
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		fire_only_once = yes
+		days_remove = 35
+		modifier = {
+			democratic_drift = -0.1
+			political_power_factor = 0.05
+			fascism_drift = 0.05
+		}
+		remove_effect = {
+			add_popularity = {
+   				ideology = fascism
+    			popularity = 0.04
+			}
+		}
+	}
+	CAT_take_government_positions = {
+		icon = eng_trade_unions_demand
+		cost = 40
+		available = {
+			fascism > 0.3
+		}
+		visible = {
+			has_global_flag = CAT_fascist_following	
+			NOT = {
+				has_government = fascism
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		fire_only_once = yes
+		days_remove = 35
+		modifier = {
+			political_power_factor = -0.1
+			stability_weekly = -0.02
+			fascism_drift = 0.05
+		}
+		remove_effect = {
+			add_popularity = {
+   				ideology = fascism
+    			popularity = 0.08
+			}
+		}
+	}
+	CAT_overthrow_government = {
+		icon = generic_speech
+		cost = 50
+		available = {
+			fascism > 0.55
+		}
+		visible = {
+			has_global_flag = CAT_fascist_following	
+			NOT = {
+				has_government = fascism
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		fire_only_once = yes
+		days_remove = 50
+		targeted_modifier = {
+			political_power_factor = -0.3
+			stability_weekly = -0.05
+			fascism_drift = 0.12
+		}
+		remove_effect = { 
+			clr_global_flag = CAT_fascist_following 
+			set_global_flag = CAT_fascist_following_ended
+
+			add_popularity = {
+   				ideology = fascism
+    			popularity = 0.15
+			}
+			country_event= {
+				hours = 01
+				id = catalonia.31
+			}
+
+		}
+	}
+
+}

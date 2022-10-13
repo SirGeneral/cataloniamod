@@ -1,0 +1,26 @@
+state={
+	id=837
+	name="STATE_837"
+	history = {
+		owner = SPR
+		add_core_of = CAT
+		victory_points = {
+			6812 10 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			68162 = {
+				naval_base = 7
+
+			}
+		}
+	}
+	provinces={
+		6812 6836 6966 
+	}
+	manpower=363823
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=large_town
+}

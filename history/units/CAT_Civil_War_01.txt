@@ -1,0 +1,137 @@
+division_template = {
+	name = "Brigada D'Infantería"
+	division_names_group = CAT_INF_01
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Milicia"
+	division_names_group = CAT_MIL_01
+	is_locked = yes
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia	= { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Brigada de Caballería"  
+	division_names_group = CAT_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 3 }		
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }   # Eng Bn
+	}
+}
+units = {
+	##### Ejército de Cuba #####
+	division= {	# "1a Brigada de L'Exèrcit"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6812 # Tarragona
+		division_template = "Brigada D'Infantería"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	# "2a Brigada de L'Exèrcit"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 854 # Girona
+		division_template = "Brigada D'Infantería"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	
+	
+	division= {	# "1a Brigada de Milicia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6836 # Tarragona
+		division_template = "Milicia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	
+	division= {	# "2a Brigada de Milicia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11779 # Cerdanya
+		division_template = "Milicia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	# "3a Brigada de Milicia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 3899 # Barcelona
+		division_template = "Milicia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	
+	
+	division= {	# "1a Brig. de Caballería"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 854 # Barna
+		division_template = "Brigada de Caballería" 
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division= {	# "2a Brig. de Caballería"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9824 # Berga
+		division_template = "Brigada de Caballería" 
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+
+	##### No Notable Naval Forces #####
+}

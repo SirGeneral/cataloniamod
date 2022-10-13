@@ -1,0 +1,21 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = catalan_news
+
+# Marco Polo Bridge I
+catalan_news = {
+	id = catalan_news.1
+	title = "Catalan Civil War!"
+	desc = catalonia_news.1.d
+	picture = GFX_catalonia_war_event
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "These are dark times"
+	}
+}
