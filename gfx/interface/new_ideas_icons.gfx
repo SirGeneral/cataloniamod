@@ -1,0 +1,39 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_idea_catalan_junta"
+		texturefile = "gfx/interface/ideas/catalan_junta_cat.dds"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_foreing_strikes"
+		texturefile = "gfx/interface/ideas/foreing_strikes_cat.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_gov_power"
+		texturefile = "gfx/interface/ideas/gov_power_cat.dds"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_alfonso_carlos"
+		texturefile = "gfx/interface/ideas/alfonso_carlos.dds"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_javier_i"
+		texturefile = "gfx/interface/ideas/javier_i.dds"		
+	}
+	SpriteType = {
+		name = "GFX_idea_federica_montseny"
+		texturefile = "gfx/interface/ideas/CAT_federica_montseny_mane.dds"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_CAT_enric_perez"
+		texturefile = "gfx/interface/ideas/CAT_enric_perez.dds"		
+	}
+	SpriteType = {
+		name = "GFX_idea_CAT_daniel_cardona"
+		texturefile = "gfx/interface/ideas/CAT_daniel_cardona.dds"		
+	}
+}

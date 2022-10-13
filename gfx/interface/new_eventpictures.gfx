@@ -1,0 +1,15 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_report_event_cat_popular_crisis"
+		texturefile = "gfx/event_pictures/report_event_cat_popular_crisis.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_cat_allies"
+		texturefile = "gfx/event_pictures/report_event_cat_allies.dds"
+	}
+	spriteType = {
+		name = "GFX_catalonia_war_event"
+		texturefile = "gfx/event_pictures/catalonia_war_event.dds"
+	}
+}

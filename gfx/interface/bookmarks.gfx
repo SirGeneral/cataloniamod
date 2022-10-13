@@ -1,0 +1,7 @@
+spriteTypes = {	
+
+	SpriteType = { 
+		name = "GFX_bookmark_catalonia"
+		texturefile = "gfx/interface/catalonia_start.dds"
+	}
+}
